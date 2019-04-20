@@ -1,0 +1,55 @@
+Outline
+
+What issue am I trying to look at:
+
+The gap between rural and urban communities in the U.S. is widening. As cities grow and thrive, small rural communities nationwide are feeling left behind, resulting in economic struggles as well as increased political unrest.
+
+College Degree attainment in rural areas
+	The gap between rural and urban areas
+	Opportunity gap
+
+Why is this issue important?
+
+	Persistent poverty in rural areas
+	Low degree attainment
+	Degree attainment helps increase economic mobility
+
+Those with a bachelor’s degree still earn more than those without. High school graduates’ median earnings is [number] while those with a 4-year degree have median earnings of [number]. So a degree remains one path out of poverty for those able to obtain one. While no ‘magic bullet’ exists to guarantee increased economic mobility, increased earnings thanks to a college education remains a strong contender.
+
+How Is the issue explained?
+		Access to educational institutions
+
+The defining elements of rurality are 1) low population density and 2) remoteness. The United States Census Bureau defines rural areas as, simply and vaguely, any area that is not urban. Urban areas, as defined by the Census Bureau, fall into two categories: Urban clusters and urbanized areas.  
+
+		What do I find (institutions per person?)
+		So what else could help the gap?
+			Broadband?
+			How common is it? 
+			How is it being tracked?
+	Does tech access help to lessen this difference?
+		If so, in what kind of areas?
+		If not, are there some other factors that could contribute?
+
+So what am I doing?
+	Isolating rural areas
+
+Since I am looking at accessibility of education, the ways that people in rural communities actually move through their communities is key. Therefore, while much of my data is collected at the county level, I will be using USDA-defined Commuting Zones. Commuting Zones were developed by the USDA Economic Research Service in the 1980s to more accurately reflect the boundaries between communities.  People generally do not limit themselves to county lines, and groups of counties typically have some amount of labor market collaboration among them, so Commuting Zones cluster counties accordingly.
+[detailed explanation of clustering and updated clusters (Fowler)]
+Since an important factor in rural areas is isolation and a lack of access to the opportunities and amenities that cities provide, I began by determining the number of 4-year degree-granting institutions in each given commuting zone. The Integrated Postsecondary Education Data System (IPEDS) provides information on 
+		Why use Commuting Zones instead of Counties?
+			Functionality of rural areas
+	Looking at their degree attainment
+	Looking at their access to educational institutions
+
+[Description of regression analysis]
+
+Sensitivity analysis: Compare at 3 different categories for nonmetro areas
+
+Validation: Compare Broadband access to FCC form (No longer being updated as a valid source)
+	
+
+What could findings suggest for policy?
+-	Broadband investments (KY, TX, others)
+-	Other educational attainment measures
+	
+
