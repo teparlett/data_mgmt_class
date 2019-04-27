@@ -9,4 +9,4 @@ THA2 was mainly the process of uploading THA1 to this repository and the creatio
 ### THA3 
 THA3 is a dataset meant to look at rural brain drain by correlating the rurality of a given county with the net migration to that county. It merged two datasets, one of rural/urban lookups from the 2010 Census, and one of the factors in population change from the 2017 ACS. 
 ### THA4
-THA4 is still to come.
+THA4 is a dataset and regression examining whether increased access to educational institutions (demonstrated by the number of institutions in a given county) is correlated with increased degree attainment in that county.
