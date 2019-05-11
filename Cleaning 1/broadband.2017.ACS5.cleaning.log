@@ -1,0 +1,48 @@
+----------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/teparlett/Documents/Data Management and Research Life Cycle/Final Project/Isolating Va
+> riables/broadband.2017.ACS5.cleaning.log
+  log type:  text
+ opened on:   1 May 2019, 20:53:05
+
+. 
+. import delimited "/Users/teparlett/Documents/Data Management and Research Life Cycle/Final Project/Raw D
+> ata/broadband.2017.ACS5.raw.csv", clear 
+(127 vars, 3,145 obs)
+
+. drop v1
+
+. drop v3
+
+. drop v5-v55
+
+. drop v57-v127
+
+. rename v2 GEOID
+
+. rename v4 households
+
+. rename v56 broadband_households
+
+. gen broadband_rate = (real(broadband_households) / real(households))
+(2 missing values generated)
+
+. drop in 1/3
+(3 observations deleted)
+
+. drop households
+
+. drop broadband_households
+
+. save "/Users/teparlett/Documents/Data Management and Research Life Cycle/Final Project/Isolated Variable
+> s/broadband.2017.ACS5.cleaned.dta"
+file /Users/teparlett/Documents/Data Management and Research Life Cycle/Final Project/Isolated Variables/b
+> roadband.2017.ACS5.cleaned.dta saved
+
+. log close
+      name:  <unnamed>
+       log:  /Users/teparlett/Documents/Data Management and Research Life Cycle/Final Project/Isolating Va
+> riables/broadband.2017.ACS5.cleaning.log
+  log type:  text
+ closed on:   1 May 2019, 21:07:01
+----------------------------------------------------------------------------------------------------------

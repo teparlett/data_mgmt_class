@@ -1,0 +1,89 @@
+--------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/teparlett/Documents/Data Management and Research Life Cycle/Final 
+> Project/Merging/rural.medianincome.broadband.attainment.merging.log
+  log type:  text
+ opened on:   5 May 2019, 13:25:21
+
+. use "/Users/teparlett/Documents/Data Management and Research Life Cycle/Final Projec
+> t/Isolated Variables/rural.2013.USDA.cleaned.dta"
+
+. merge 1:1 GEOID using "/Users/teparlett/Documents/Data Management and Research Life 
+> Cycle/Final Project/Isolated Variables/medianincome.2017.ACS5.cleaned.dta"
+(note: variable GEOID was str5, now str7 to accommodate using data's values)
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             5
+        from master                         3  (_merge==1)
+        from using                          2  (_merge==2)
+
+    matched                             3,140  (_merge==3)
+    -----------------------------------------
+
+. sort _merge
+
+. drop in 1/5
+(5 observations deleted)
+
+. drop in 1/5
+(5 observations deleted)
+
+. drop _merge
+
+. merge 1:1 GEOID using "/Users/teparlett/Documents/Data Management and Research Life 
+> Cycle/Final Project/Isolated Variables/broadband.2017.ACS5.cleaned.dta"
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             7
+        from master                         0  (_merge==1)
+        from using                          7  (_merge==2)
+
+    matched                             3,135  (_merge==3)
+    -----------------------------------------
+
+. sort _merge
+
+. drop in 1/7
+(7 observations deleted)
+
+. drop _merge
+
+. merge 1:1 GEOID using "/Users/teparlett/Documents/Data Management and Research Life 
+> Cycle/Final Project/Isolated Variables/attainment.2017.ACS5.cleaned.dta"
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             7
+        from master                         0  (_merge==1)
+        from using                          7  (_merge==2)
+
+    matched                             3,135  (_merge==3)
+    -----------------------------------------
+
+. sort _merge
+
+. drop in 1/7
+(7 observations deleted)
+
+. drop _merge
+
+. gen n_median_household_income = real(median_household_income)
+
+. drop median_household_income
+
+. rename n_median_household_income median_household_income
+
+. save "/Users/teparlett/Documents/Data Management and Research Life Cycle/Final Proje
+> ct/Merged Dataset/full_dataset.dta"
+file /Users/teparlett/Documents/Data Management and Research Life Cycle/Final Project/
+> Merged Dataset/full_dataset.dta saved
+
+. log close
+      name:  <unnamed>
+       log:  /Users/teparlett/Documents/Data Management and Research Life Cycle/Final 
+> Project/Merging/rural.medianincome.broadband.attainment.merging.log
+  log type:  text
+ closed on:   5 May 2019, 13:34:59
+--------------------------------------------------------------------------------------

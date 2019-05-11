@@ -1,0 +1,48 @@
+--------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/teparlett/Documents/Data Management and Research Life Cycle/Final Projec
+> t/Isolating Variables/rural.2013.USDA.cleaning.log
+  log type:  text
+ opened on:   1 May 2019, 19:41:46
+
+. 
+. import excel "/Users/teparlett/Documents/Data Management and Research Life Cycle/Final Pro
+> ject/Raw Data/rural.2013.USDA.raw.xls", sheet("Rural-urban Continuum Code 2013") clear
+
+. rename A GEOID
+
+. gen county_state = (C + ", " + B)
+
+. drop B
+
+. drop C
+
+. drop D
+
+. rename E RUCC_2013
+
+. drop F
+
+. gen nonmetro = 1 if real(RUCC_2013) > 3
+(1,236 missing values generated)
+
+. drop in 1
+(1 observation deleted)
+
+. sort GEOID
+
+. drop in 3144/3221
+(78 observations deleted)
+
+. save "/Users/teparlett/Documents/Data Management and Research Life Cycle/Final Project/Iso
+> lated Variables/rural.2013.USDA.cleaned.dta"
+file /Users/teparlett/Documents/Data Management and Research Life Cycle/Final Project/Isolat
+> ed Variables/rural.2013.USDA.cleaned.dta saved
+
+. log close
+      name:  <unnamed>
+       log:  /Users/teparlett/Documents/Data Management and Research Life Cycle/Final Projec
+> t/Isolating Variables/rural.2013.USDA.cleaning.log
+  log type:  text
+ closed on:   1 May 2019, 19:50:06
+--------------------------------------------------------------------------------------------
